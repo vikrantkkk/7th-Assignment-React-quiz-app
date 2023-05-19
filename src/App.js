@@ -47,36 +47,3 @@ export default function App() {
     </div>
   );
 }
-
-// import React, { useState } from 'react';
-// import './style.css';
-// import { Data } from './Data';
-
-// export default function App() {
-//   const [showResult, setShowResult] = useState(false);
-//   const [score, setScore] = useState(0);
-//   const [currentQuestion, setCurrentQuestion] = useState(Data);
-
-//   return (
-//     <div className="container">
-//       <h2>Quiz question</h2>
-
-//       {showResult ? (
-//         <div>
-//           <h3>Score {score}</h3>
-//         </div>
-//       ) : (
-//         <div className="All">
-//           <h3 className="question">{currentQuestion[0].question}</h3>
-//           <div className="options">
-//             <ul>
-//               {currentQuestion[0].options.map((option) => (
-//                 <li key={option.id}>{option.text}</li>
-//               ))}
-//             </ul>
-//           </div>
-//         </div>
-//       )}
-//     </div>
-//   );
-// }
