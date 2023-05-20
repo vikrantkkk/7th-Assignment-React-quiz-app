@@ -3,7 +3,7 @@ import './style.css';
 import { Data } from './Data';
 
 export default function App() {
-  const [showResult, setShowResult] = useState(false);
+  const [showResult, setShowResult] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
 
@@ -27,13 +27,13 @@ export default function App() {
   };
   return (
     <div className="container">
-      <h2>
+      <h2 className="score">
         Questions {currentIndex + 1}/ {Data.length}
       </h2>
 
       {showResult ? (
         <div>
-          <h3>Score {score}</h3>
+          <h3 className="score">Score {score}</h3>
         </div>
       ) : (
         <div className="All">
