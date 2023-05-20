@@ -20,9 +20,14 @@ export default function App() {
     }
   };
 
+  const handleRestart = () => {
+    setShowResult(false);
+    setCurrentIndex(0);
+    setScore(0);
+  };
   return (
     <div className="container">
-      <h2>Quiz question</h2>
+      <h2>Quiz total {Data.length} questions</h2>
 
       {showResult ? (
         <div>
@@ -30,7 +35,10 @@ export default function App() {
         </div>
       ) : (
         <div className="All">
-          <h3 className="question">{currentQuestion.question}</h3>
+          <h3 className="question">
+            <span className="span">{currentIndex + 1}.</span>{' '}
+            {currentQuestion.question}
+          </h3>
           <div className="options">
             <ul>
               {currentQuestion.options.map((item) => {
@@ -41,6 +49,9 @@ export default function App() {
                 );
               })}
             </ul>
+            <button className="restart" onClick={handleRestart}>
+              Restart
+            </button>
           </div>
         </div>
       )}
