@@ -27,7 +27,9 @@ export default function App() {
   };
   return (
     <div className="container">
-      <h2>Quiz total {Data.length} questions</h2>
+      <h2>
+        Questions {currentIndex + 1}/ {Data.length}
+      </h2>
 
       {showResult ? (
         <div>
@@ -36,7 +38,7 @@ export default function App() {
       ) : (
         <div className="All">
           <h3 className="question">
-            <span className="span">{currentIndex + 1}.</span>{' '}
+            <span className="span">{currentIndex + 1}.</span>
             {currentQuestion.question}
           </h3>
           <div className="options">
