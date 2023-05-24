@@ -3,7 +3,7 @@ import './style.css';
 import { Data } from './Data';
 
 export default function App() {
-  const [showResult, setShowResult] = useState(true);
+  const [showResult, setShowResult] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
 
